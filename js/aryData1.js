@@ -8,10 +8,10 @@ let sum=0;
 for(let i=0; i<numAry.length;i++){
   console.log(`${i}위치=>${numAry[i]}`);
    //sum=sum+numAry[i]
-  // if(numAry[i]>50){
+  // if(numAry[i]>50){//배열값이 50보다 크면 누적
   //   sum+=numAry[i]//sum=sum+numAry[i]
   // }
-  if(numAry[i]%2==0){
+  if(numAry[i]%2==0){//짝수누적
     sum=sum+numAry[i]
   }
 }
