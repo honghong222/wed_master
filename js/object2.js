@@ -14,7 +14,7 @@ let f3={name:'박길동',age:22};
 let f4={name:'최길동',age:23};
 let myfriends=[f1,f2,f3,f4];
 friendListFnc();
-
+//함수정의 =>실행은 호출을 통해서.
 function friendListFnc(){
   console.log('friendListFnc()');
    let newName=document.querySelector('#name').value;
@@ -22,7 +22,7 @@ function friendListFnc(){
    console.log(newName=='',newAge=='')
    //falsy => false:'',0,null,undefined
    //truthy => true : 값이 있는 것.
-   if(newName!=''&&newAge!=''){
+   if(newName!=''&&newAge!=''){//if(newName&&newAge)
    myfriends.push({name: newName, age: newAge});
 
    }
