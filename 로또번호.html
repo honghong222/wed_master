@@ -40,18 +40,53 @@
         <div id="lotto"><span></span><span></span></div>
     </div>
     <script>//임의의 숫자 6개 생성:1~45범위.
-    function randomName(){
-        let numAry=[];
-        for(let i=0;i<6;i++){
-            let temp=parseInt(Math.random()*45)+1;
-            numAry.push(temp);
+    // function randomName(){
+    //     let numAry=[];
+    //     for(let i=0;i<6;i++){
+    //         let temp=parseInt(Math.random()*45)+1;
+    //         numAry.push(temp);
+    //     }
+        
+    //     return numAry[temp];
+    // }
+    // document.querySelector('btn').addEventListener('click',function(){
+        
+    // });
+    //1 버튼클릭이벤트
+    //2 펑션 임의의 숫자 6개 function generateNumber
+    document.querySelector('#btn').addEventListener('click',(e)=>{
+        let ary = generateNumber();
+        let str = '';
+        for(let i=0;i<ary.length;i++){
+            str += '<span>' + ary[i] + '</span>';
         }
-        
-        return numAry[temp];
+        document.querySelector('#lotto').innerHTML=str;
+    })
+    function generateNumber(){
+        let numAry = [];
+        for(let i=0;i<6;){
+            let temp=parseInt(Math.random()*45)+1
+            if(numAry.indexOf(temp)==-1){//원욱
+            numAry.push(temp);
+            i++//추가할 경우에만 i를 증가
+            }
+        }
+        return numAry
     }
-    document.querySelector('btn').addEventListener('click',function(){
-        
-    });
+//중복값 체크
+    function dupValueCheck(ary=[], checkNum=8){
+        //배열안에 값 체크
+        //배열에 찾는 값이 있으면 인덱슥밧을 반환하고 없으면 -1이란 값을 반환
+        for(let i=0;i<ary.length;i++){
+            if(ary[i]==checkNum){ //찾는 값이 있다는 의미의 if
+                return i;
+            }
+        }
+        return -1; //찾는값이 없다는 의미
+    }
+    let tempAry = [20,45,30,17]
+    let num = 43;
+    console.log(dupValueCheck(tempAry,num))
     </script>
 </body>
 
