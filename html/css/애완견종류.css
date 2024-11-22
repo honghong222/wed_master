@@ -1,0 +1,81 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap');
+    /*{margin: 0; padding: 0;}*/
+    #container{
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header{
+      background-color: rgb(32, 85, 155);
+      font-family: "Do Hyeon", sans-serif;
+      padding: 10px;
+    }
+    section{
+      background-color: aqua;
+      padding: 10px;
+    }
+    section ul{
+      text-align: center;
+    }
+    section ul li{
+      display: inline-block;
+      margin: 10px 20px;
+      
+    }
+    section a{
+      text-decoration: none;
+    }
+    section p{
+      text-align: right;
+      padding-right: 20px;
+    }
+    article{
+      border: 1px solid red;
+      background-color: rgb(0,0,0,0.1);
+      font-family: "Black Han Sans", sans-serif;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    figure{
+      text-align: center;
+    }
+    aside{
+      background-color: blueviolet;
+      padding: 10px;
+    }
+    footer{
+      background-color: brown;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+    footer p{
+      margin-top: 0px;
+      
+    }
+    nav ul{
+      text-align: right;
+      margin: 0px;
+      list-style-position: inside;
+    }
+    nav ul li{
+      display: inline-block;
+      padding: 3px 10px;
+      border-bottom: 2px solid #fff;
+      border-radius: 10px;
+    }
+    nav ul li a{
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      /*margin: 10px;*/
+      display: block;
+    }
+    img{width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 2px #aaa;
+    margin: 10px;}
+
+  </style>

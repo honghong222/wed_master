@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>개발자지원서</title>
+  <style>
+    #container {
+      width: 600px;
+      margin: 0 auto;
+     
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    legend {
+      font-size: 18px;
+      color: blue;
+      margin: 20px;font-weight: bold;
+    }
+
+    fieldset {
+      border: none;
+      margin: 20px;
+    }
+
+    label {
+      float: left;
+      width: 100px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      list-style-type: none;
+    }
+
+    ul {
+      margin-bottom: ;
+    }
+    .asd{
+      width: 300px;
+      float: none;
+    }
+    input:checked + span{
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>국제 개발자 지원서</h1>
+    <p>HTML,CSS,javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <form>
+      <fieldset>
+        <legend>개인정보</legend>
+        <ul>
+          <li>
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name">
+          </li>
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" name="phone">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>지원분야</legend>
+        <ul>
+          <li>
+            <label class="asd"><input type="radio" name="giwon" value="" checked>웹 퍼블리싱</label>
+          </li>
+          <li> 
+            <label class="asd"><input type="radio" name="giwon" value="">웹 애플리케이션 개발</label>
+          </li>
+           <li>
+            <label class="asd"><input type="radio" name="giwon" value="">개발 환경 개선</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>지원동기</legend>
+        <ul>
+          <li>
+            <label for="memo"></label>
+            <textarea name="memo" id="memo" cols="60" rows="5" placeholder="지원 동기 간략히 써 주세요"></textarea>
+          </li>
+          <li>
+          <input type="submit" value="접수하기">
+      <input type="reset" value="다시쓰기">
+       </li> </ul>
+        
+      </fieldset>
+      
+    </form>
+  </div>
+</body>
+
+</html>

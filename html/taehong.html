@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김태홍 사이트</title>
+  <style>
+      .adf{ 
+        border: 3px ;
+        border-spacing: 3px;
+        text-align: center;
+              
+      }
+      .adf caption{
+        caption-side: bottom;
+        text-align: left;
+        
+      }
+      .adf th,.adf td{
+        border: 3px solid black;
+      }
+      .adf thead{
+        color: brown;
+        background-color: bisque;
+        font-size: 20px;
+      }
+      .adf tbody td {
+        background-color: bisque;
+        color: black;
+        font-size: 30px;
+        /*border: 2px solid blue;*/
+      }
+      .adf tfoot{
+        text-align: left;
+
+      }
+      .adg {border: 9px solid blue;
+      border-collapse: collapse;
+    text-align: center;}
+    
+      .adg td{
+        border: 1px solid pink;
+        color: pink;
+        padding: 10px;
+        
+      }
+      .adg th{
+        background-color: rgb(9, 133, 133);
+        border: 1px solid white;
+        color: white;
+        border-bottom:solid red ;
+      }
+      .adg tr:nth-child(2n+1){
+        background-color: rgb(197, 74, 74);
+      }
+  </style>
+</head>
+<body>
+  <h1>웹 개발 기초</h1>
+  <p><b>html</b> = 웹문서 내용 구성 담당</p>
+  <P><b>css</b> = 웹문서 디자인을 담당</P>
+  <p><mark><strong style="color: red;">javascrpt</strong></mark> = 사용자의 동작에 반응</p>
+  <blockquote><p><q>Lorem ipsum dolor sit amet<br>
+     consectetur adipisicing elit.<br>
+     Consequuntur, repudiandae!</q></p></blockquote>
+     <hr>
+     <pre>
+      Lorem, ipsum dolor
+Lorem,                        ipsum dolor
+Lorem, ipsum      dolor
+Lorem, ipsum dolor
+  </pre>
+  <h2><ruby>金太弘<rt>김태홍</rt></ruby></h2>
+  <table class="adf">
+    <caption>친구들 인적사항</caption>
+    <thead>
+    <tr>
+      <th>이름</th>
+      <th>이메일</th>
+      <th>전화번호</th>
+      <th>주소</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>김철수</td>
+      <td>chul@naver.com</td>
+      <td>010-1234-1234</td>
+      <td rowspan="3">용산동</td>
+    </tr>
+    <tr>
+      <td>이원욱</td>
+      <td>dnjsdnr@naver.com</td>
+      <td>010-1111-1111</td>
+    </tr>
+    <tr>
+      <td>김기환</td>
+      <td>rlghks@naver.com</td>
+      <td>111-1111-1111</td>
+    </tr>
+    <tr>
+      <td>김태홍</td>
+      <td>ghd@naver.com</td>
+      <td>222-2222-2222</td>
+      <td></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4">우리는 한가족</td>
+    </tr>
+  </tfoot>
+  </table>
+  <table class="adg">
+    <caption>이름</caption>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>이메일</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>김철수</td>
+      <td>chul@naver.com</td>
+      </tr>
+      <tr>
+        <td>이원욱</td>
+        <td>dnjsdnr@naver.com</td>
+      </tr>
+      <tr>
+        <td>김기환</td>
+        <td>rlghks@naver.com</td>
+      </tr>
+      <tr>
+        <td>김태홍</td>
+        <td>ghd@naver.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>

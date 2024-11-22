@@ -157,8 +157,10 @@
         let currentQty = parseInt(e.target.closest('div.quantity').children[1].value);
         if(currentQty<10){
 
-        
-        currentQty++;}else{return}
+        currentQty++;
+        }else{
+          return
+        }
         e.target.closest('div.quantity').children[1].value = currentQty;
         // 가격.
         let price = e.target.closest('tr').children[2].firstElementChild.innerText;
