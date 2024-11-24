@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <table border="2">
+    <tr>
+      <th>아이디</th>
+      <td><input type="text" name="uid" id="uid"></td>
+    </tr>
+    <tr>
+      <th>비밀번호</th>
+      <td><input type="password" name="upw" id="upw"></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <button>로그인</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    let members = [{id: 'user01',pw: '1111',name: '사용자1'},
+      {id: 'user02',pw: '2222',name: '사용자2'},
+      {id: 'user03',pw: '3333',name: '사용자3'}
+    ]
+    
+      let result=members.filter(member =>member.id ==uid&&member.pw==upw)
+      if(result.length){ //falsy = > 0,'',null,undefined
+        alert('성공')
+      }else{
+        alert('실패');
+      }
+  
+    
+
+
+
+
+
+    //1이벤트 등록
+    //2사용자 입력값(2) 변수저장
+    //3 배열에 각각의 값을 비교 같으면 alert 아니면
+
+     //document.querySelector('button').addEventListener('click',e =>{
+      //let id = document.querySelector('#uid').value
+     // let pw = document.querySelector('#upw').value
+    //   for(let i=0;i<members.length;i++)
+    //   if(uid == members[i].id && upw ==members[i].pw){
+    //     alert('로그인이 됐습니다')
+    //   }else if(uid == members[i].id && upw !=members[i].pw){
+    //     alert('비밀번호가 틀렸습니다')
+    //   }else if(uid != members[i].id && upw ==members[i].pw){
+    //     alert('비밀번호가 틀렸습니다')
+    //   }
+    //   document.querySelector('#uid').value
+    //   document.querySelector('#upw').value
+     //})
+
+
+     //교수님
+     document.querySelector('button').addEventListener('click',e =>{
+      let uid = document.querySelector('#uid').value
+      let upw = document.querySelector('#upw').value
+      members.forEach(member =>{
+        if(member.id==uid&&member.pw ==upw){
+          isOk = true;
+          return;
+        }
+      })
+      // let isOk = false;
+      // for (let i=0;i<members.length;i++){
+      //   if(members[i].id=uid&&members[i].pw == upw){
+      //     isOk=true;
+      //     break;
+      //   }
+      // }
+      if(isOk)
+      alert('OK')
+    else
+    alert('NO')
+    })
+  </script>
+</body>
+
+</html>

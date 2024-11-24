@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login.html</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap" rel="stylesheet">
+  <style>
+    #container {
+      position: relative;  
+      margin: 0 auto;
+    }
+    .hea {
+     position: absolute;
+     z-index: 10;
+     width: 100%;
+    }
+body{
+  margin: 0px;
+}
+h1 {
+  font-family: "Bagel Fat One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  float: left;
+  padding-left: 20px;
+  color: orange;
+  margin: 0px;
+  font-size: 40px;
+}
+h1 a{
+  color: orange;
+  text-decoration: none;
+}
+li{
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  list-style-type: none;
+  float: left;
+  padding-left: 30px;
+}
+li a{
+  text-decoration: none;
+  color: rgb(227, 201, 151);
+}
+table{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  position: fixed;
+  padding: 40px;
+  background-color: rgba(112, 110, 197, 0.5);
+  border-radius: 20px;
+}
+tr{
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  color: rgb(54, 4, 100);
+}
+th{
+  padding: 10px;
+}
+input{
+  background-color: rgb(112, 107, 164);
+  border-style: none;
+  width: 150px;
+  height: 25px;
+}
+button{
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  background-color:  rgb(112, 107, 164);
+  float:right;
+  border-style: none;
+  color:  rgb(54, 4, 100);
+}
+video{
+  z-index: 1;
+}
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <header class="hea">
+        <h1><a href="main.html" target="_blank"> G-Tower</a></h1>
+        <nav>
+          <ul>
+            <li><a href="#" target="_blank">지브리 애니</a></li>
+            <li><a href="#" target="_blank">지브리 파크</a></li>
+          </ul>
+        </nav>
+    </header>
+    <table class="table">
+      <tr>
+        <th>아이디</th>
+        <td><input type="text" name="uid" id="uid" class="form-contrl"></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="upw" id="upw" class="form-contrl"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+        <button class="btn btn-primary">로그인</button>
+      </td>
+      </tr>
+    </table>
+    <div>
+      <video src="video/Totoro On Top Of A Tree.mp4" autoplay loop></video>
+    </div>
+  </div>
+  <script src="js/login.js"></script>
+</body>
+
+</html>

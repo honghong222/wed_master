@@ -1,0 +1,30 @@
+#container{
+  width: 600px;
+  margin: 0 auto;
+}
+img{
+  width: 600px;
+}
+#check{
+  text-align: center;
+}
+h1{background-color: black;
+color: white; 
+font-size: 16px;
+text-align: left;
+padding: 5px;
+margin-top: 0;
+}
+h2{color: red;
+font-size: 16px;
+}
+p{font-size: 20px;
+line-height: 2;
+font-weight: bold;
+}
+.bluetext{
+  color: blue;
+}
+.smalltext{
+  font-size: 12px;
+}

@@ -1,0 +1,61 @@
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+header{
+    background-color: rgb(208, 36, 62);
+    overflow: hidden;
+    padding: 10px;
+}
+header h1{
+    float: left;
+    color: white;
+    padding-left: 10px;
+}
+nav ul{
+    float: right;
+    padding-top: 15px;
+    
+}
+nav li{
+    float: left;
+    padding-right: 20px;
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+section{
+    border: 5px solid #ccc;
+    overflow: hidden;
+}
+article{
+    float: left;
+    width: 300px;
+}
+aside{
+    clear: both;
+    padding: 20px;
+}
+dl{
+    width: 670px;
+    float: left;
+    padding-bottom:30px ;
+}
+img{
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+footer{
+    clear: both;
+    background-color: blue;
+    padding: 20px;
+}
+footer p{
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
