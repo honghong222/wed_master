@@ -1,165 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Jua&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Poor+Story&display=swap"
+    rel="stylesheet">
   <style>
     #container {
-      position: relative;  /*부모 요소를 기준으로 자식 요소 위치 설정 기준점 잡기*/
+      position: relative;
       margin: 0 auto;
+      padding-left: 100px;
+      background-color: rgb(212, 233, 215);
+
     }
+
     .hea {
       height: 100px;
-     width: 100%;
-    
+      width: 100%;
+
     }
-body{
-  margin: 0;
-}
-h1 {
-  font-family: "Bagel Fat One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  float: left;
-  padding-left: 20px;
-  color: orange;
-  margin: 0;
-  font-size: 40px;
-}
-ul{
-  margin: 0;
-}
-li{
-  font-family: "Jua", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 22px;
-  list-style-type: none;
-  float: left;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-a{
-  text-decoration: none;
-  color: rgb(227, 201, 151);
-  padding-top: 20px;
-}
-.cart{
-  float: right;
-  padding-right: 30px;
-}
-.login{
-  float: right;
-  padding-right: 30px;
-}
-    .modal{
-  display: none;
-}
-.modalbody{
- margin: 10% auto ;
- background-color: white;
-  width: 50%;
-  height: 60%;
-  border-radius: 10px;
-}
-.modal.on{
-  display: none;
-}
-button{
-  border-style: none;
-}
-.list{
-  height: 400px;
-  float: left;
-}
-.img{
-  width: 100%;
-  height: 400px;
-}
-.text{
-  float: left;
-  
-}
+
+    body {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: "Bagel Fat One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      float: left;
+      padding-left: 20px;
+      color: orange;
+      margin: 0;
+      font-size: 40px;
+    }
+
+    h1 a {
+      color: orange;
+    }
+
+    .moviename {
+      font-family: "Bagel Fat One", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      padding-left: 20px;
+      color: orange;
+      font-size: 20px;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    li {
+      font-family: "Jua", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 22px;
+      list-style-type: none;
+      float: left;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(227, 201, 151);
+      padding-top: 20px;
+    }
+
+    .cart {
+      float: right;
+      padding-right: 30px;
+    }
+
+    .login {
+      float: right;
+      padding-right: 30px;
+    }
+
+    .modal {
+      display: none;
+      margin: 15% auto;
+      position: fixed;
+      width: 700px;
+      height: 500px;
+      background-color: rgb(212, 233, 215, 0.7);
+      transform: translate(-50%, -50%);
+      left: 50%;
+      right: 50%;
+
+    }
+
+    .modal_body {
+
+      border-radius: 10px;
+      position: fixed;
+    }
+
+    .modal.on {
+      display: block;
+    }
+
+
+    .list {
+      height: 400px;
+      float: left;
+      padding: 10px;
+
+    }
+
+    .img {
+      width: 1600px;
+      height: 400px;
+      padding: 20px;
+      border: 2px solid rgb(227, 201, 151);
+      border-radius: 20px;
+      margin: 10px;
+      background-color: rgb(228, 245, 226);
+
+    }
+
+    .text {
+      font-family: "Jua", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 30px;
+      color: rgb(240, 170, 41);
+    }
+
+    p {
+      font-family: "Poor Story", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px;
+    }
+
+    .btn.btn-primary,
+    .modal_open {
+      font-family: "Jua", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 30px;
+      float: right;
+      padding: 0px;
+      margin-top: 100px;
+      margin-right: 20px;
+      color: orange;
+      background-color: rgba(0, 0, 0, 0);
+      border-style: none;
+    }
+
+    .close_btn {
+      float: right;
+      padding: 0px;
+      font-size: 50px;
+      background-color: rgb(236, 231, 231);
+      border-radius: 50%;
+      height: 60px;
+      width: 60px;
+      border-style: none;
+    }
   </style>
 </head>
+
 <body>
   <div id="container">
     <header class="hea">
-      <h1>G-Tower</h1>
+      <h1><a href="main.html" target="_blank">G-Tower</a></h1>
       <nav>
         <ul>
           <li><a href="product.html" target="_blank">지브리 애니</a></li>
-          <li class="cart"><a href="cart.html" target="_blank">장바구니</a></li>
           <li class="login"><a href="login.html" target="_blank">로그인</a></li>
+          <li class="cart"><a href="cart.html" target="_blank">장바구니</a></li>
         </ul>
       </nav>
     </header>
-  <div>
-    <div class="moviename">영화 목록</div>
-    <div>
-      <div class="img"><img src="img/귀를 기울이면.webp" class="list">
-        <div><dt class="text">귀를 기울이면</dt>
-          <dd>생기있고 활달한 성질을 가지고 있으며 자신보다 몸집이 큰 개나 집에 들어온
-            침입자를 겁내는 일이 없어 좋은 변견이고 우리나라 최고의 가정견으로 
-            자리 잡고 있다
-          </dd></div>
+    <div class="modal">
+      <div class="modal_body">
+        <button type="button" class="close_btn">×</button>
+        <h2 class="text">귀를 기울이면</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/0pVkiod6V0U?si=jzFpWxxU_WIy97d2"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
-      <div class="modal">
-        <div class="modalbody">
-          <span>귀를 기울이면</span>
-          <p></p>
-        </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">마녀배달부 키키</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/zbvx7pqw5Gg?si=sr20Y1Vp3KSVVS_n"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="img"><img src="img/마녀배달부 키키.jpg" class="list"></div>
-      <div class="modal">
-        <div class="modalbody">
-          <span>마녀배달부 키키</span>
-          <p>내용</p>
-        </div>
+    </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">벼랑위의 포뇨</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/h6XP82TyFWw?si=vXSxuSN-U-HxUjl_"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="img"><img src="img/벼랑위의 포뇨.webp" class="list"></div>
-      <div class="modal">
-        <div class="modalbody">
-          <span>벼랑위의 포뇨</span>
-          <p>내용</p>
-        </div>
+    </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">센과치히로의 행방불명</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/fDUFP7EeXLE?si=XtqhnZBCD2tkqJt5"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="img"><img src="img/센과치히로의 행방불명.webp" class="list"></div>
-      <div class="modal">
-        <div class="modalbody">
-          <span>센과치히로의 행방불명</span>
-          <p>내용</p>
-        </div>
+    </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">이웃집 토토로</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/92a7Hj0ijLs?si=pn-r9yeeoxte4u_3"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="img"><img src="img/이웃집_토토로1.jpg" class="list"></div>
-        <div class="modal">
-          <div class="modalbody">
-            <span>이웃집 토토로</span>
-            <p>내용</p>
+    </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">추억은 방울방울</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/OfkQlZArxw0?si=zs0jvvBfhUfkNL4U"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal_body">
+        <h2 class="text">하울의 움직이는 성</h2>
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/iwROgK94zcM?si=k-5jqNhPDNHEq9RK"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div>
+      <div class="moviename">
+        <h2>애니매이션 목록</h2>
+      </div>
+      <div>
+        <div class="img"><img src="img/귀를 기울이면.webp" class="list">
+          <div>
+            <h2 class="text">귀를 기울이면</h2>
+            <p>중학교 3학년 시즈쿠는 평소 책을 많이 읽는 소녀이다. 여름방학,
+              매번 도서카드에서 먼저 책을 빌려간 세이지란 이름을 발견하고 호기심을 갖는다.
+              어느 날 아버지의 도시락을 전해주러 가는 길. 지하철 안에서 혼자 탄 고양이를 보게 된다.
+              신기하게 여긴 시즈쿠는 고양이를 따라가다 골동품가게에 들어가게 되고,
+              그곳에서 주인 할아버지와 손자를 보게 된다. 그 손자는 다름 아닌 아마사와 세이지,
+              사춘기의 두 사람은 점차 서로의 사랑에 대해 알게 된다.
+              시즈쿠는 바이올린 장인을 자신의 장래로 확실히 정한 세이지를 보면서 자신의
+              꿈과 미래를 진지하게 고민하게 된다. 그 후 이탈리아 연수를 간 세이지가 돌아 올 때까지
+              작가가 되고자 도전해 보기로 하고 소설을 쓰게 된다.</p>
+            <button type="button" class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
           </div>
         </div>
-        <div class="img"><img src="img/추억은 방울방울.webp" class="list"></div>
-          <div class="modal">
-            <div class="modalbody">
-              <span>추억은 방울방울</span>
-              <p>내용</p>
-            </div>
+        <div class="img"><img src="img/마녀배달부 키키.jpg" class="list">
+          <div>
+            <h2 class="text">마녀배달부 키키</h2>
+            <p>어느 시골 마을에서 마녀의 피를 잇고 태어난 키키. '마녀가 되려는 소녀는 13살이 되던
+              보름달 뜬 밤 마녀가 없는 마을에서 1년을 수행하면 마녀가 될 수 있다'는 전통을 따라,
+              친구인 고양이 지지와 함께 빗자루를 타고 날아 바다를 건너 대도시에 도착한다.
+              하지만 도시 사람들은 마녀를 전혀 반기지 않았다. 실망한 키키는 마을을 떠돌다가,
+              물건을 두고 간 손님을 찾는 빵집 주인 오소노를 만난다.
+              키키는 자신의 비행 능력으로 그 손님에게 물건을 전해주고 오소노는 그 보답으로 빵집 윗방에서 키키를 묵게 해준다.
+              무언가 일거리를 찾던 키키는 빵집 일을 도우면서 마녀 배달 서비스를 개업한다.</p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
           </div>
-          <div class="img"><img src="img/하울의 움직이는 성.webp" class="list"></div>
-            <div class="modal">
-              <div class="modalbody">
-                <span>하울의 움직이는 성</span>
-                <p>내용</p>
-              </div>
-            </div>
-            </div>
-  </div>
+        </div>
+        <div class="img"><img src="img/벼랑위의 포뇨.webp" class="list">
+          <div>
+            <h2 class="text">벼랑위의 포뇨</h2>
+            <p>
+              호기심 많은 물고기 소녀 ‘포뇨’는 따분한 바다 생활에 싫증을 느끼고,
+              급기야 아빠 몰래 늘 동경하던 육지로 가출을 감행한다.
+              해파리를 타고 육지로 올라온 ‘포뇨’는 그물에 휩쓸려 유리병 속에 갇히는 위기에 처하게
+              되고 때마침 해변가에 놀러 나온 소년 ‘소스케’의 도움으로 구출된다.
+              ‘소스케’와의 즐거운 육지 생활도 잠시, 인간의 모습을 포기하고 바다의 주인이 된
+              아빠 ‘후지모토’에 의해 결국 ‘포뇨’는 바다로 다시 돌아간다.
+              하지만 여동생들의 도움으로 탈출에 성공한 ‘포뇨’는 소녀의 모습으로 변해 거대한 파도와 함께
+              ‘소스케’에게로 향하는데… 과연 포뇨는 어려움을 뚫고 소스케를 다시 만날 수 있을 것인가?
+            </p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
+          </div>
+        </div>
+        <div class="img"><img src="img/센과치히로의 행방불명.webp" class="list">
+          <div>
+            <h2 class="text">센과치히로의 행방불명</h2>
+            <p>
+              금지된 세계의 문이 열렸다! 이사 가던 날, 수상한 터널을 지나자 인간에게는 금지된 신들의 세계로 오게 된 치히로..
+              신들의 음식을 먹은 치히로의 부모님은 돼지로 변해버린다.
+              “걱정마, 내가 꼭 구해줄게…” 겁에 질린 치히로에게 다가온 정체불명의 소년 하쿠.
+              그의 따뜻한 말에 힘을 얻은 치히로는 인간 세계로 돌아가기 위해 사상 초유의 미션을 시작하는데…
+            </p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
+          </div>
+        </div>
+        <div class="img"><img src="img/이웃집_토토로1.jpg" class="list">
+          <div>
+            <h2 class="text">이웃집 토토로</h2>
+            <p>
+              사츠키와 메이는 어머니의 병으로 인해 아버지와 도시에서 시골로 이사를 오게 된다.
+              언니인 사츠키가 학교에 간 사이, 혼자 숲속에서 놀던 메이는 우연히 도토리를 지고 가던 토토로를 발견해 따라간다.
+              이후 사츠키와 메이는 토토로와 함께 숲속에서 즐거운 시간을 보낸다.
+              시간이 지난 어느 날, 병원에서 위급한 소식이 들려 오자 아버지는 급히 버스를 타고 어머니 병원으로 향하는 한편,
+              자신도 엄마한테 가겠다고 떼쓰던 메이가 행방불명된다.
+            </p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
+          </div>
+        </div>
+        <div class="img"><img src="img/추억은 방울방울.webp" class="list">
+          <div>
+            <h2 class="text">추억은 방울방울</h2>
+            <p>
+              다카하타 이사오의 대표작으로, 오카모토 호타루와 도네 유코의 만화를 애니메이션화한 작품이다.
+              오피스 레이디인 타에코는 야마가타로 휴가를 떠난다. 그곳에서 그녀는 귀농 청년 도시오를 만나고,
+              둘은 점점 가까워진다. 평화로운 시골 마을에서 타에코는 열두 살 어린아이였던 시절의 아름다운 추억을 떠올린다. 여름 휴가가 끝난 후,
+              도쿄로 돌아가던 타에코는 자신이 진정으로 원하는 것이 무엇인지 깨닫게 된다.
+            </p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
+          </div>
+        </div>
+        <div class="img"><img src="img/하울의 움직이는 성.webp" class="list">
+          <div>
+            <h2 class="text">하울의 움직이는 성</h2>
+            <p>
+              자신의 아름다움을 모른 채 평범하게 살던 한 소녀는 마녀의 질투로 저주에 걸려 할머니가 되고 만다.
+              소녀는 마녀의 저주를 풀기 위해 마법사 하울을 찾아 떠나고 마침내 어딘가는 조금 이상해 보이는 하울의 움직이는 성에 들어가게 된다.
+              그리고 청소부 할머니로 위장한 소녀는 하울과 악마 캘시퍼 그리고 하울의 제자와 오묘한 동거를 시작한다.
+            </p>
+            <button class="btn btn-primary">장바구니</button>
+            <button class="modal_open">예고편</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let productData = JSON.parse(localStorage.getItem('productData'));
+      let cartData = JSON.parse(localStorage.getItem('cartData'));
+
+      const modal = document.querySelector('.modal')
+      const modal_open = document.querySelector('.modal_open')
+      const modal_close = document.querySelector('.close_btn')
+
+
+      //   modal_open.addEventListener('click',function(){
+      //   modal.classList.add('on')
+      // })
+      document.querySelectorAll('.modal_open').forEach(item => {
+        item.addEventListener('click', function (e) {
+          document.querySelector('.modal').classList.add('on');
+          modal_body
+          
+          
+        })
+      })
+
+      modal_close.addEventListener('click', function () {
+        modal.classList.remove('on')
+      })
+    </script>
 </body>
+
 </html>
+<!-- let title = e.target.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+          console.log(title); .innerHTML = title; -->

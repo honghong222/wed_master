@@ -24,45 +24,45 @@ const memberData = [{
 // pcode, pname, price
 const productData = [{
   pcode: 'P001',
-  pname: '이웃집 토토로',
+  pname: '귀를 기울이면',
   price: 1500,
-  image: '이웃집 토토로.jpg'
+  image: '귀를 기울이면.webp'
 },
 {
   pcode: 'P002',
-  pname: '하울의 움직이는 성',
+  pname: '마녀배달부 키키',
   price: 1500,
-  image: '하울의 움직이는 성.webp'
+  image: '마녀배달부 키키.jpg'
 },
 {
   pcode: 'P003',
-  pname: '센과 치히로의 행방불명',
+  pname: '벼랑위의 포뇨',
   price: 1500,
-  image: '센과 치히로의 행방불명.webp'
+  image: '벼랑위의 포뇨.webp'
 },
 {
   pcode: 'P004',
+  pname: '센과치히로의 행방불명',
+  price: 1000,
+  image: '센과치히로의 행방불명.webp'
+},
+{
+  pcode: 'P005',
+  pname: '이웃집 토토로',
+  price: 1000,
+  image: '이웃집_토토로1.jpg'
+},
+{
+  pcode: 'P006',
   pname: '추억은 방울방울',
   price: 1000,
   image: '추억은 방울방울.webp'
 },
 {
-  pcode: 'P005',
-  pname: '마녀배달부 키키',
-  price: 1000,
-  image: '마녀배달부 키키.jpg'
-},
-{
-  pcode: 'P006',
-  pname: '귀를 기울이면',
-  price: 1000,
-  image: '귀를 기울이면.webp'
-},
-{
   pcode: 'P007',
-  pname: '벼랑위의 포뇨',
+  pname: '하울의 움직이는 성',
   price: 1500,
-  image: '벼랑위의 포뇨.webp'
+  image: '하울의 움직이는 성.webp'
 }
 ]
 
