@@ -12,6 +12,7 @@ document.querySelector('button.btn-primary').addEventListener('click',(e)=>{
     localStorage.setItem('logId', id);
     localStorage.setItem('logName',loginInfo[0].name);
     location.href = 'main.html';
+    alert('환영합니다!')
   }else{
     alert('아이디,비밀번호를 확인하세요!');
   }
