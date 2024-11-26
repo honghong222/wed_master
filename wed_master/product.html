@@ -195,68 +195,67 @@
       </nav>
     </header>
     <div class="modal">
-     
       <div class="modal_body">
-         <button type="button" class="close_btn">×</button>
+        <button type="button" class="close_btn">×</button>
         <h2 class="text">귀를 기울이면</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/0pVkiod6V0U?si=jzFpWxxU_WIy97d2"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/0pVkiod6V0U?si=jzFpWxxU_WIy97d2"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">마녀배달부 키키</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/zbvx7pqw5Gg?si=sr20Y1Vp3KSVVS_n"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/zbvx7pqw5Gg?si=sr20Y1Vp3KSVVS_n"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">벼랑위의 포뇨</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/h6XP82TyFWw?si=vXSxuSN-U-HxUjl_"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/h6XP82TyFWw?si=vXSxuSN-U-HxUjl_"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">센과치히로의 행방불명</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/fDUFP7EeXLE?si=XtqhnZBCD2tkqJt5"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/fDUFP7EeXLE?si=XtqhnZBCD2tkqJt5"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">이웃집 토토로</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/92a7Hj0ijLs?si=pn-r9yeeoxte4u_3"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/92a7Hj0ijLs?si=pn-r9yeeoxte4u_3"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">추억은 방울방울</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/OfkQlZArxw0?si=zs0jvvBfhUfkNL4U"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/OfkQlZArxw0?si=zs0jvvBfhUfkNL4U"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div class="modal">
       <div class="modal_body">
         <h2 class="text">하울의 움직이는 성</h2>
-        <!-- <iframe width="700" height="400" src="https://www.youtube.com/embed/iwROgK94zcM?si=k-5jqNhPDNHEq9RK"
+        <iframe width="700" height="400" src="https://www.youtube.com/embed/iwROgK94zcM?si=k-5jqNhPDNHEq9RK"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div>
@@ -274,6 +273,7 @@
       let cartData = JSON.parse(localStorage.getItem('cartData'));
 
       productData.forEach(product => {
+        console.log(productData)
         let template = `<div class="col" data-pcode="${product.pcode}">
           <div class="img"><img src="images/${product.image}" class="list">
           <div>
@@ -281,7 +281,7 @@
             <p>${product.mname}</p>
             <p class="pri">가격:${product.price}원<p>
             <button type="button" class="btn btn-primary">장바구니</button>
-            <button type="button" class="modal_open" data-pcode="${product.pcode}" >예고편</button>
+            <button type="button" class="modal_open">예고편</button>
           </div>
           </div>
         </div>`
@@ -289,100 +289,25 @@
         document.querySelector('div.row').insertAdjacentHTML("beforeend", template);
       })
 
-
-      const modal = document.querySelectorAll('.modal')
-      const modal_open = document.querySelectorAll('.modal_open')
-      const modal_close = document.querySelectorAll('.close_btn')
-
+      const modal = document.querySelector('.modal')
+            const modal_open = document.querySelector('.modal_open')
+            const modal_close = document.querySelector('.close_btn')
 
 
-
-      modal_open.forEach(item => {
-      item.addEventListener('click', function(e) {
-        
-        
-        if(item.dataset.pcode == "P001"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[0].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-          
-
-        } else if(item.dataset.pcode == "P002"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[1].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        } else if(item.dataset.pcode == "P003"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[2].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }else if(item.dataset.pcode == "P004"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[3].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }else if(item.dataset.pcode == "P005"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[4].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }else if(item.dataset.pcode == "P006"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[5].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }else if(item.dataset.pcode == "P007"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[6].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }else if(item.dataset.pcode == "P008"){
-          let YouTube = `<iframe width="700" height="400" src=${productData[7].link}"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-          document.querySelector('.modal').classList.add('on');
-          document.querySelector('h2.text').insertAdjacentHTML("beforeend", YouTube);
-        }
-      })
+            document.querySelectorAll('.modal_open').forEach(item => {
+    item.addEventListener('click', function(e) {
+        document.querySelector('.modal').classList.add('on');
+		let title = e.target.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
+		console.log(title);
+		
+		document.querySelector('.modal').querySelector('h2').innerText = title;
     })
-
-       modal_close.forEach(button => {
-          button.addEventListener('click', function () {
-
-            const targetModal = button.closest('.modal');
-            console.log(targetModal)
-            if (targetModal) {
-              targetModal.classList.remove('on');
-              const iframe = targetModal.querySelector('iframe');
-              if (iframe) {
-                iframe.remove();
-              }
-            }
-          });
-        });
-
-
-
-    //로그인
-
-
+})
+    
+            modal_close.addEventListener('click', function () {
+              modal.classList.remove('on')
+            })
+//로그인
       document.querySelectorAll('button.btn-primary').forEach(item => {
         item.addEventListener('click', (e) => {
           e.preventDefault();
